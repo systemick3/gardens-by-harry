@@ -7,6 +7,26 @@
  * @see https://drupal.org/node/1728096
  */
 
+/**
+ * Implements hook_css_alter - fix for Google fonts Josefin Sans bug.
+ *
+ */
+function gbh_css_alter(&$css) {
+  $replace = 'http://fonts.googleapis.com/css?family=Josefin+Sans';
+  foreach ($css as $delta => &$css_data) {
+    if ($delta == 'http://fonts.googleapis.com/css?family=Josefin_Sans') {
+      $css_data['data'] = $replace;
+      $css[$replace] = $css_data;
+      unset($css[$delta]);
+      break;
+    }
+  }
+
+//  print '<pre>';
+//  print_r($css);
+//  die(__FUNCTION__);
+}
+
 
 /**
  * Override or insert variables into the maintenance page template.

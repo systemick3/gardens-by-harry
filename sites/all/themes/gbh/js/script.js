@@ -17,7 +17,22 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    if ($('#block-views-gallery-block').length) {
+
+      $('.views-row img').hover(function(event, context) {
+        $(this).css('opacity', '0.4');
+        //alert($(this).parents('.views-row').attr('class'));
+        //$(this).parents('.views-row').css('margin-bottom', '0');
+        $(this).parents('.views-row').children('.views-field-title').css('visibility', 'visible');
+      });
+
+      $('.views-row img').mouseout(function(event, context) {
+        $(this).css('opacity', '1');
+        //alert($(this).parents('.views-row').attr('class'));
+        //$(this).parents('.views-row').css('margin-bottom', '2em');
+        $(this).parents('.views-row').children('.views-field-title').css('visibility', 'hidden');
+      });
+    }
 
   }
 };

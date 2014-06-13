@@ -56,9 +56,11 @@
 
   <div id="main">
 
+    <div class="menu-link"><a href="#navigation">Menu</a></div>
+
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+      <?php //print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -76,8 +78,7 @@
     </div>
 
     <div id="navigation">
-
-      <?php if ($main_menu): ?>
+      <?php /*if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
           <?php
           // This code snippet is hard to modify. We recommend turning off the
@@ -96,7 +97,7 @@
             ),
           )); ?>
         </nav>
-      <?php endif; ?>
+      <?php endif;*/ ?>
 
       <?php print render($page['navigation']); ?>
 

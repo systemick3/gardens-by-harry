@@ -42,8 +42,8 @@ $zen-auto-include-item-base: false;
   background-color:white;
   margin-left:auto;
   margin-right:auto;
-  margin-top:2.2em;
-  width:96%;
+  /*margin-top:2.2em;*/
+  width:100%;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -64,41 +64,268 @@ $zen-auto-include-item-base: false;
   @include zen-grid-container();
 }
 
-  /**
-* hgroup
-*/
-hgroup {
-  background-image:url("../images/banner.jpg");
-  background-position:center top;
-  background-size:cover;
-  margin-bottom:0em;
-  margin-left:1%;
-  margin-top:1%;
-  width:98%;
-  height: 445px;
-}
-
 header {
-  margin-bottom:7em;
+  /*background-image:url("../images/banner.jpg");
+  background-position:center top;
+  background-size:cover;*/
+  background-color: #0c0c0c;
   margin-left:auto;
   margin-right:auto;
-  text-align:right;
-  width:96%;
+  margin-top:1%;
+  text-align:center;
+  width:98%;
+}
+
+.header__site-link {
+  font-family: $josefin;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow:3px 3px 3px #855B1B;
+  text-transform: uppercase;
+
+  &:link,
+  &:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  /*font-size: 1.2em;*/
+}
+
+/* The slogan (or tagline) of a website. */
+.header__site-slogan {
+  font-family: $merriweather;
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 2em;
+  text-shadow: 4px 4px 4px #855B1B;
+  text-transform: uppercase;
+}
+
+#navigation {
+  clear: left;
+  padding: 0;
+}
+
+/**
+  * Menu block.
+  */
+.block-menu-block {
+  /*clear: both;*/
+  margin-top: -3em;
+  width: 100%;
+
+  .menu__item.is-leaf {
+    list-style-type: none;
+    list-style-image: none;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      background-color: #ab9367;
+      border: solid white 3px;
+      list-style-type: none;
+      list-style-image: none;
+      text-align: center;
+      /*background-color: #ab9367;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      border-top: solid white 3px;
+      display: inline-block;
+      margin: 0.1em;
+      margin-bottom: 0em;
+      padding: 0.2em;*/
+
+
+      /*display: block;
+      width: 100%;*/
+
+      a {
+        font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
+        font-size: 0.9em;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-decoration:none;
+        text-transform:uppercase;
+      }
+    }
+
+  }
+}
+
+#block-views-materials-block-2 {
+  /*float:left;
+  width: 50%;*/
+  display: none;
+  width: 100%;
+
+  .views-field-title {
+    background-color: #fff;
+    color: #000;
+    display: block;
+    float: right;
+    opacity: 0.7;
+    padding: 0.5em;
+    position: relative;
+    top: -2.5em;
+  }
+}
+
+.contact-form {
+  clear: right;
+  padding-bottom: 2em;
+}
+
+.menu-link {
+  background-image:url("../images/menu-collapsed.png");
+  background-repeat:no-repeat;
+  background-position:right 60%;
+  display: block;
+  padding: 1em 0.5em 0.5em 0.5em;
+  width: 3em;
 }
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
+  body {
+    background-image:url("../images/backdrop2.jpg");
+    background-size:cover;
+  }
+
+  #page {
+    border:solid 2px #384001;
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2.2em;
+    width:96%;
+  }
+
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: $nav-height;
     position: relative;
   }
+
+  header {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1%;
+    text-align:right;
+    width:98%;
+  }
+
+  /**
+ * Navigation bar.
+ */
   #navigation {
+    /* Sometimes you want to prevent overlapping with main div. */
+    /* overflow: hidden; */
+
     /* Move the navbar up inside #main's padding. */
     position: absolute;
     top: 0;
     height: $nav-height;
     width: $zen-grid-width;
+
+    .block {
+      margin-bottom: 0;
+    }
+
+    .block-menu .block__title,
+    .block-menu-block .block__title {
+      @extend %element-invisible;
+    }
+
+    /* Main menu and secondary menu links and menu block links. */
+    .links,
+    .menu {
+      margin: 0;
+      padding: 0;
+      text-align: left; /* LTR */
+
+      li {
+        /* A simple method to get navigation links to appear in one line. */
+        float: left; /* LTR */
+        /*padding: 0 10px 0 0;*/ /* LTR */
+        list-style-type: none;
+        list-style-image: none;
+      }
+    }
+  }
+
+  /* The name of the website. */
+  .header__site-name {
+    font-size: 2.0em;
+    margin: 0;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  /* The link around the name of the website. */
+  .header__site-link {
+    font-family: $josefin;
+    font-weight: bold;
+    text-shadow:3px 3px 3px #855B1B;
+
+    &:link,
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  /* The slogan (or tagline) of a website. */
+  .header__site-slogan {
+    font-family: $merriweather;
+    font-size: 1.7em;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 2em;
+    margin-right: 3.8em;
+    text-shadow: 4px 4px 4px #0c0c0c;
+  }
+
+  #block-views-materials-block-1 {
+    float: left;
+    margin-right: 3em;
+    width: 45%;
+  }
+
+  #block-views-materials-block-2 {
+    display: block;
+    float:left;
+    width: 50%;
+
+    .views-field-title {
+      background-color: #fff;
+      color: #000;
+      display: block;
+      float: right;
+      opacity: 0.7;
+      padding: 0.5em;
+      position: relative;
+      top: -2.5em;
+    }
+  }
+
+  .menu-link {
+    display: none;
   }
 }
 
@@ -180,6 +407,90 @@ header {
       }
     }
   }
+
+  header {
+    background-image:url("../images/banner.jpg");
+    background-position:center top;
+    background-size:cover;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1%;
+    text-align:right;
+    width:98%;
+  }
+
+  /* The name of the website. */
+  .header__site-name {
+    font-size: 2.0em;
+    margin: 0;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  /* The link around the name of the website. */
+  .header__site-link {
+    font-family: $josefin;
+    font-weight: bold;
+    text-shadow:3px 3px 3px #855B1B;
+
+    &:link,
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  /* The slogan (or tagline) of a website. */
+  .header__site-slogan {
+    font-family: $merriweather;
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 3.5em;
+    margin-right: 3.8em;
+    text-shadow: 4px 4px 4px #0c0c0c;
+  }
+
+  /**
+  * Menu block.
+  */
+  .block-menu-block {
+    left: 22%;
+    position: absolute;
+    text-align: center;
+    bottom: 100%;
+
+    ul {
+
+      li {
+        background-color: #ab9367;
+        border-left: solid white 3px;
+        border-right: solid white 3px;
+        border-top: solid white 3px;
+        display: inline-block;
+        margin: 0.1em;
+        margin-bottom: 0em;
+        padding: 0.2em;
+
+        a {
+          font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
+          font-size: 0.9em;
+          font-weight: bold;
+          letter-spacing: 0;
+          /*padding-left: 0.3em;*/
+          text-decoration:none;
+          text-transform:uppercase;
+          /*vertical-align: 25%*/;
+        }
+      }
+
+    }
+  }
 }
 
 /**
@@ -188,6 +499,10 @@ header {
 @media all and (min-width: 960px) {
 
   $zen-column-count: 5;
+
+  #main {
+    padding: 2em 3em 0 2em;
+  }
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -210,12 +525,12 @@ header {
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     #content {
-      @include zen-grid-item(4, 1);
+      @include zen-grid-item(3, 1);
     }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      @include zen-grid-item(2, 4);
     }
   }
 
@@ -236,6 +551,96 @@ header {
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(1, 5);
+    }
+  }
+
+  /**
+* hgroup
+*/
+  hgroup {
+    display: block;
+  }
+
+  header {
+    background-image:url("../images/banner.jpg");
+    background-position:center top;
+    background-size:cover;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1%;
+    text-align:right;
+    width:98%;
+  }
+
+  /* The name of the website. */
+  .header__site-name {
+    font-size: 3.5em;
+    margin: 0;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  /* The link around the name of the website. */
+  .header__site-link {
+    font-family: $josefin;
+    font-weight: bold;
+    text-shadow:3px 3px 3px #855B1B;
+
+    &:link,
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  /* The slogan (or tagline) of a website. */
+  .header__site-slogan {
+    font-family: $merriweather;
+    font-size: 1.7em;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 3.5em;
+    margin-right: 3.8em;
+    text-shadow: 4px 4px 4px #0c0c0c;
+  }
+
+  /**
+ * Menu block.
+ */
+  .block-menu-block {
+    left: 18%;
+    position: absolute;
+    text-align: center;
+    bottom: 100%;
+
+    ul {
+
+      li {
+        background-color: #ab9367;
+        border-left: solid white 3px;
+        border-right: solid white 3px;
+        border-top: solid white 3px;
+        display: inline-block;
+        margin: 0.1em;
+        margin-bottom: 0em;
+        padding: 0.5em;
+
+        a {
+          font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
+          font-size: 1.5em;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          text-decoration:none;
+          text-transform:uppercase;
+          vertical-align: 25%;
+        }
+      }
+
     }
   }
 }

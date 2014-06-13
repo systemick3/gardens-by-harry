@@ -91,32 +91,7 @@
 
 /* Wrapper for website name and slogan. */
 .header__name-and-slogan {
-  float: left;
-}
-
-/* The name of the website. */
-.header__site-name {
-  margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
-}
-
-/* The link around the name of the website. */
-.header__site-link {
-  &:link,
-  &:visited {
-    color: #000;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
-/* The slogan (or tagline) of a website. */
-.header__site-slogan {
-  margin: 0;
+  color: #fff;
 }
 
 /* The secondary menu (login, etc.) */
@@ -130,37 +105,9 @@
   clear: both;
 }
 
-/**
- * Navigation bar.
- */
-#navigation {
-  /* Sometimes you want to prevent overlapping with main div. */
-  /* overflow: hidden; */
-
-  .block {
-    margin-bottom: 0;
-  }
-
-  .block-menu .block__title,
-  .block-menu-block .block__title {
-    @extend %element-invisible;
-  }
-
-  /* Main menu and secondary menu links and menu block links. */
-  .links,
-  .menu {
-    margin: 0;
-    padding: 0;
-    text-align: left; /* LTR */
-
-    li {
-      /* A simple method to get navigation links to appear in one line. */
-      float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
-      list-style-type: none;
-      list-style-image: none;
-    }
-  }
+a.header__site-link,
+a.header__site-link:visited {
+  color: #fff;
 }
 
 /**
@@ -177,6 +124,32 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.region-sidebar-second {
+  padding-top: 0.9em;
+
+  #block-block-1 {
+    border: solid 1px #855B1B;
+    border-radius: 0.6em;
+    padding: 1em;
+  }
+
+  p {
+    position: relative;
+    top: -1em;
+  }
+}
+
+#footer {
+  background:-moz-linear-gradient(white, #384001); /* For Firefox 3.6 to 15 */
+  background:linear-gradient(white, #384001 ); /* Standard syntax */
+  clear:both;
+  color:white;
+  font-size:1.2em;
+  padding-top:3em;
+  padding-bottom:1em;
+  text-align:center;
 }
 
 /**
@@ -804,4 +777,73 @@ tr.selected td {
     background-color: #0072b9;
     background-image: image-url("progress.gif");
   }
+}
+
+input[type="submit"] {
+  background-color:#ab9367;
+  border-radius:0.4em;
+  border:solid 1px #285D85;
+  color:white;
+  font-size:1.1em;
+  padding:0.3em;
+}
+
+.view-materials {
+  clear: both;
+}
+
+.block {
+
+  article {
+    position: relative;
+    top: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  header {
+    background: none;
+    margin-left: 0;
+    text-align: left;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .field-name-body {
+    position: relative;
+    top: -1em;
+  }
+
+  .links {
+    position: relative;
+    top: -2.3em;
+  }
+}
+
+#block-views-gallery-block {
+  margin-bottom: 0;
+  position: relative;
+  top: -2em;
+
+  .views-row {
+    float: left;
+    /*margin-bottom: 2em;*/
+    margin-right: 2em;
+
+    .views-field-title {
+
+      visibility: hidden;
+      text-align: center;
+      top: -8em;
+      position: relative;
+      text-transform: uppercase;
+
+    }
+  }
+
 }
