@@ -1,0 +1,4 @@
+name = Image limit
+description = Limits the number of images displayed
+package = Custom
+core = 7.x

@@ -1,0 +1,16 @@
+<?php
+
+/**
+* Implements hook_node_view().
+*/
+function image_limit_node_view($node, $view_mode, $langcode) {
+  if (($view_mode == 'teaser' || $view_mode == 'image_only')) {
+    //print '<pre>';
+    //print "mode = $view_mode<br/>";
+    //print_r($node);
+    //die(__FUNCTION__);
+    $field = 'field_' . $node->type . '_image';
+    
+    $node->content[$field]['#items'] = array_slice($node->content[$field]['#items'], 0, 1);
+  }
+}
