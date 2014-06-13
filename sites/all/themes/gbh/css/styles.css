@@ -901,19 +901,20 @@ h1 {
     font-family: "Josefin Sans", Helvetica, "Nimbus Sans L", sans-serif;
     font-weight: bold;
     text-shadow: 3px 3px 3px #855B1B;
+    text-transform: none;
   }
-  /* line 282, ../sass/layouts/_responsive.scss */
+  /* line 283, ../sass/layouts/_responsive.scss */
   .header__site-link:link, .header__site-link:visited {
     color: #fff;
     text-decoration: none;
   }
-  /* line 288, ../sass/layouts/_responsive.scss */
+  /* line 289, ../sass/layouts/_responsive.scss */
   .header__site-link:hover, .header__site-link:focus {
     text-decoration: none;
   }
 
   /* The slogan (or tagline) of a website. */
-  /* line 294, ../sass/layouts/_responsive.scss */
+  /* line 295, ../sass/layouts/_responsive.scss */
   .header__site-slogan {
     font-family: Merriweather, Arial, "DejaVu Serif", serif;
     font-size: 1.7em;
@@ -922,22 +923,23 @@ h1 {
     margin-bottom: 2em;
     margin-right: 3.8em;
     text-shadow: 4px 4px 4px #0c0c0c;
+    text-transform: none;
   }
 
-  /* line 304, ../sass/layouts/_responsive.scss */
+  /* line 306, ../sass/layouts/_responsive.scss */
   #block-views-materials-block-1 {
     float: left;
     margin-right: 3em;
     width: 45%;
   }
 
-  /* line 310, ../sass/layouts/_responsive.scss */
+  /* line 312, ../sass/layouts/_responsive.scss */
   #block-views-materials-block-2 {
     display: block;
     float: left;
     width: 50%;
   }
-  /* line 315, ../sass/layouts/_responsive.scss */
+  /* line 317, ../sass/layouts/_responsive.scss */
   #block-views-materials-block-2 .views-field-title {
     background-color: #fff;
     color: #000;
@@ -949,7 +951,7 @@ h1 {
     top: -2.5em;
   }
 
-  /* line 327, ../sass/layouts/_responsive.scss */
+  /* line 329, ../sass/layouts/_responsive.scss */
   .menu-link {
     display: none;
   }
@@ -961,19 +963,19 @@ h1 {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 344, ../sass/layouts/_responsive.scss */
+  /* line 346, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 346, ../sass/layouts/_responsive.scss */
+  /* line 348, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 351, ../sass/layouts/_responsive.scss */
+  /* line 353, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -984,19 +986,19 @@ h1 {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 359, ../sass/layouts/_responsive.scss */
+  /* line 361, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 361, ../sass/layouts/_responsive.scss */
+  /* line 363, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 366, ../sass/layouts/_responsive.scss */
+  /* line 368, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -1007,27 +1009,27 @@ h1 {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 374, ../sass/layouts/_responsive.scss */
+  /* line 376, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 376, ../sass/layouts/_responsive.scss */
+  /* line 378, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 381, ../sass/layouts/_responsive.scss */
+  /* line 383, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 386, ../sass/layouts/_responsive.scss */
+  /* line 388, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -1041,7 +1043,7 @@ h1 {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 392, ../sass/layouts/_responsive.scss */
+  /* line 394, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -1051,7 +1053,7 @@ h1 {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 396, ../sass/layouts/_responsive.scss */
+  /* line 398, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -1059,14 +1061,14 @@ h1 {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 401, ../sass/layouts/_responsive.scss */
+  /* line 403, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 405, ../sass/layouts/_responsive.scss */
+  /* line 407, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -1074,7 +1076,7 @@ h1 {
     margin-right: -100%;
   }
 
-  /* line 411, ../sass/layouts/_responsive.scss */
+  /* line 413, ../sass/layouts/_responsive.scss */
   header {
     background-image: url("../images/banner.jpg");
     background-position: center top;
@@ -1087,7 +1089,7 @@ h1 {
   }
 
   /* The name of the website. */
-  /* line 423, ../sass/layouts/_responsive.scss */
+  /* line 425, ../sass/layouts/_responsive.scss */
   .header__site-name {
     font-size: 2.0em;
     margin: 0;
@@ -1096,24 +1098,24 @@ h1 {
   }
 
   /* The link around the name of the website. */
-  /* line 431, ../sass/layouts/_responsive.scss */
+  /* line 433, ../sass/layouts/_responsive.scss */
   .header__site-link {
     font-family: "Josefin Sans", Helvetica, "Nimbus Sans L", sans-serif;
     font-weight: bold;
     text-shadow: 3px 3px 3px #855B1B;
   }
-  /* line 437, ../sass/layouts/_responsive.scss */
+  /* line 439, ../sass/layouts/_responsive.scss */
   .header__site-link:link, .header__site-link:visited {
     color: #fff;
     text-decoration: none;
   }
-  /* line 443, ../sass/layouts/_responsive.scss */
+  /* line 445, ../sass/layouts/_responsive.scss */
   .header__site-link:hover, .header__site-link:focus {
     text-decoration: none;
   }
 
   /* The slogan (or tagline) of a website. */
-  /* line 449, ../sass/layouts/_responsive.scss */
+  /* line 451, ../sass/layouts/_responsive.scss */
   .header__site-slogan {
     font-family: Merriweather, Arial, "DejaVu Serif", serif;
     font-size: 1.1em;
@@ -1127,14 +1129,14 @@ h1 {
   /**
   * Menu block.
   */
-  /* line 462, ../sass/layouts/_responsive.scss */
+  /* line 464, ../sass/layouts/_responsive.scss */
   .block-menu-block {
     left: 22%;
     position: absolute;
     text-align: center;
     bottom: 100%;
   }
-  /* line 470, ../sass/layouts/_responsive.scss */
+  /* line 472, ../sass/layouts/_responsive.scss */
   .block-menu-block ul li {
     background-color: #ab9367;
     border-left: solid white 3px;
@@ -1145,7 +1147,7 @@ h1 {
     margin-bottom: 0em;
     padding: 0.2em;
   }
-  /* line 480, ../sass/layouts/_responsive.scss */
+  /* line 482, ../sass/layouts/_responsive.scss */
   .block-menu-block ul li a {
     font-family: 'Josefin Sans', sans-serif;
     vertical-align: 25%;
@@ -1162,7 +1164,7 @@ h1 {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 503, ../sass/layouts/_responsive.scss */
+  /* line 505, ../sass/layouts/_responsive.scss */
   #main {
     padding: 2em 3em 0 2em;
   }
@@ -1170,19 +1172,19 @@ h1 {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 510, ../sass/layouts/_responsive.scss */
+  /* line 512, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 512, ../sass/layouts/_responsive.scss */
+  /* line 514, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 80%;
     margin-left: 20%;
     margin-right: -100%;
   }
-  /* line 517, ../sass/layouts/_responsive.scss */
+  /* line 519, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
@@ -1193,19 +1195,19 @@ h1 {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 525, ../sass/layouts/_responsive.scss */
+  /* line 527, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 527, ../sass/layouts/_responsive.scss */
+  /* line 529, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 60%;
     margin-left: 0%;
     margin-right: -60%;
   }
-  /* line 532, ../sass/layouts/_responsive.scss */
+  /* line 534, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 40%;
@@ -1216,27 +1218,27 @@ h1 {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 540, ../sass/layouts/_responsive.scss */
+  /* line 542, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 542, ../sass/layouts/_responsive.scss */
+  /* line 544, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
-  /* line 547, ../sass/layouts/_responsive.scss */
+  /* line 549, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 552, ../sass/layouts/_responsive.scss */
+  /* line 554, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
@@ -1247,12 +1249,12 @@ h1 {
   /**
 * hgroup
 */
-  /* line 560, ../sass/layouts/_responsive.scss */
+  /* line 562, ../sass/layouts/_responsive.scss */
   hgroup {
     display: block;
   }
 
-  /* line 564, ../sass/layouts/_responsive.scss */
+  /* line 566, ../sass/layouts/_responsive.scss */
   header {
     background-image: url("../images/banner.jpg");
     background-position: center top;
@@ -1265,7 +1267,7 @@ h1 {
   }
 
   /* The name of the website. */
-  /* line 576, ../sass/layouts/_responsive.scss */
+  /* line 578, ../sass/layouts/_responsive.scss */
   .header__site-name {
     font-size: 3.5em;
     margin: 0;
@@ -1274,24 +1276,24 @@ h1 {
   }
 
   /* The link around the name of the website. */
-  /* line 584, ../sass/layouts/_responsive.scss */
+  /* line 586, ../sass/layouts/_responsive.scss */
   .header__site-link {
     font-family: "Josefin Sans", Helvetica, "Nimbus Sans L", sans-serif;
     font-weight: bold;
     text-shadow: 3px 3px 3px #855B1B;
   }
-  /* line 590, ../sass/layouts/_responsive.scss */
+  /* line 592, ../sass/layouts/_responsive.scss */
   .header__site-link:link, .header__site-link:visited {
     color: #fff;
     text-decoration: none;
   }
-  /* line 596, ../sass/layouts/_responsive.scss */
+  /* line 598, ../sass/layouts/_responsive.scss */
   .header__site-link:hover, .header__site-link:focus {
     text-decoration: none;
   }
 
   /* The slogan (or tagline) of a website. */
-  /* line 602, ../sass/layouts/_responsive.scss */
+  /* line 604, ../sass/layouts/_responsive.scss */
   .header__site-slogan {
     font-family: Merriweather, Arial, "DejaVu Serif", serif;
     font-size: 1.7em;
@@ -1305,14 +1307,14 @@ h1 {
  /**
 * Menu block.
 */
-  /* line 615, ../sass/layouts/_responsive.scss */
+  /* line 617, ../sass/layouts/_responsive.scss */
   .block-menu-block {
     left: 18%;
     position: absolute;
     text-align: center;
     bottom: 100%;
   }
-  /* line 623, ../sass/layouts/_responsive.scss */
+  /* line 625, ../sass/layouts/_responsive.scss */
   .block-menu-block ul li {
     background-color: #ab9367;
     border-left: solid white 3px;
@@ -1323,7 +1325,7 @@ h1 {
     margin-bottom: 0em;
     padding: 0.5em;
   }
-  /* line 633, ../sass/layouts/_responsive.scss */
+  /* line 635, ../sass/layouts/_responsive.scss */
   .block-menu-block ul li a {
     font-family: 'Josefin Sans', sans-serif;
     vertical-align: 25%;

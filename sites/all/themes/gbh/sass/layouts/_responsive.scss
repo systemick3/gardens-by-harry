@@ -277,6 +277,7 @@ h1 {
     font-family: $josefin;
     font-weight: bold;
     text-shadow:3px 3px 3px #855B1B;
+    text-transform: none;
 
     &:link,
     &:visited {
@@ -299,6 +300,7 @@ h1 {
     margin-bottom: 2em;
     margin-right: 3.8em;
     text-shadow: 4px 4px 4px #0c0c0c;
+    text-transform: none;
   }
 
   #block-views-materials-block-1 {
