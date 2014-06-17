@@ -107,7 +107,7 @@
 
 a.header__site-link,
 a.header__site-link:visited {
-  color: #fff;
+  /*color: #fff;*/
 }
 
 /**
@@ -827,23 +827,48 @@ input[type="submit"] {
 
 #block-views-gallery-block {
   margin-bottom: 0;
+  margin-left: 3.5em;
   position: relative;
   top: -2em;
 
   .views-row {
     float: left;
-    /*margin-bottom: 2em;*/
-    margin-right: 2em;
+    margin-bottom: -1em;
+    margin-right: 1em;
 
     .views-field-title {
 
+      font-weight: bold;
       visibility: hidden;
       text-align: center;
       top: -8em;
       position: relative;
       text-transform: uppercase;
+      -webkit-transition: opacity 500ms;
+      -moz-transition: opacity 500ms;
+      -o-transition: opacity 500ms;
+      transition: opacity 500ms;
 
+    }
+
+    img {
+      border: solid 1px #855B1B;
     }
   }
 
+}
+
+#block-block-3 {
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.node-type-material {
+
+  article {
+    top: 0;
+  }
 }

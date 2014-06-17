@@ -21,16 +21,18 @@ Drupal.behaviors.my_custom_behavior = {
 
       $('.views-row img').hover(function(event, context) {
         $(this).css('opacity', '0.4');
-        //alert($(this).parents('.views-row').attr('class'));
-        //$(this).parents('.views-row').css('margin-bottom', '0');
         $(this).parents('.views-row').children('.views-field-title').css('visibility', 'visible');
       });
 
       $('.views-row img').mouseout(function(event, context) {
         $(this).css('opacity', '1');
-        //alert($(this).parents('.views-row').attr('class'));
-        //$(this).parents('.views-row').css('margin-bottom', '2em');
         $(this).parents('.views-row').children('.views-field-title').css('visibility', 'hidden');
+      });
+
+      // Prevent flickering when the cursor moves over the title field
+      $('.views-row .views-field-title').hover(function(event, context) {
+        $(this).css('visibility', 'visible');
+        $(this).parents('.views-row').find('img').css('opacity', 0.4);
       });
     }
 

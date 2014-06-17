@@ -65,10 +65,9 @@ $zen-auto-include-item-base: false;
 }
 
 header {
-  /*background-image:url("../images/banner.jpg");
-  background-position:center top;
-  background-size:cover;*/
-  background-color: #0c0c0c;
+  /*background-color: #0c0c0c;*/
+  background:-moz-linear-gradient(#a1ab67, white); /* For Firefox 3.6 to 15 */
+  background:linear-gradient(#a1ab67, white); /* Standard syntax */
   margin-left:auto;
   margin-right:auto;
   margin-top:1%;
@@ -77,15 +76,20 @@ header {
 }
 
 .header__site-link {
+  color: #222601;
   font-family: $josefin;
   font-size: 1.4em;
   font-weight: bold;
-  text-shadow:3px 3px 3px #855B1B;
+  text-shadow:2px 2px 2px white;
   text-transform: uppercase;
+
+  a {
+    color: #222601;
+  }
 
   &:link,
   &:visited {
-    color: #fff;
+    color: #222601;
     text-decoration: none;
   }
 
@@ -101,18 +105,20 @@ h1 {
 
 /* The slogan (or tagline) of a website. */
 .header__site-slogan {
-  font-family: $merriweather;
+  color: #222601;
+  font-family: $josefin;
   font-size: 0.8em;
   font-style: italic;
   margin: 0;
   margin-bottom: 2em;
-  text-shadow: 4px 4px 4px #855B1B;
+  text-shadow: 1px 1px 1px #222601;
   text-transform: uppercase;
 }
 
 #navigation {
   clear: left;
   padding: 0;
+  width: 100%
 }
 
 /**
@@ -137,21 +143,10 @@ h1 {
       list-style-type: none;
       list-style-image: none;
       text-align: center;
-      /*background-color: #ab9367;
-      border-left: solid white 3px;
-      border-right: solid white 3px;
-      border-top: solid white 3px;
-      display: inline-block;
-      margin: 0.1em;
-      margin-bottom: 0em;
-      padding: 0.2em;*/
-
-
-      /*display: block;
-      width: 100%;*/
 
       a {
-        font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
+        font-family: 'Josefin Sans', sans-serif;
+        vertical-align:25%;
         font-size: 0.9em;
         font-weight: bold;
         letter-spacing: 0;
@@ -163,11 +158,15 @@ h1 {
   }
 }
 
+#block-views-materials-block-1 {
+  float: left;
+  margin-right: 3em;
+  width: 45%;
+}
+
 #block-views-materials-block-2 {
-  /*float:left;
-  width: 50%;*/
   display: none;
-  width: 100%;
+  /*width: 100%;
 
   .views-field-title {
     background-color: #fff;
@@ -177,8 +176,8 @@ h1 {
     opacity: 0.7;
     padding: 0.5em;
     position: relative;
-    top: -2.5em;
-  }
+    top: 2.5em;
+  }*/
 }
 
 .contact-form {
@@ -199,7 +198,10 @@ h1 {
 @media all and (min-width: 480px) {
   body {
     background-image:url("../images/backdrop2.jpg");
+    background-repeat: no-repeat;
     background-size:cover;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   #page {
@@ -207,7 +209,7 @@ h1 {
     background-color:white;
     margin-left:auto;
     margin-right:auto;
-    margin-top:2.2em;
+    margin-top:1.5em;
     width:96%;
   }
 
@@ -250,14 +252,16 @@ h1 {
     /* Main menu and secondary menu links and menu block links. */
     .links,
     .menu {
-      margin: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
       padding: 0;
       text-align: left; /* LTR */
 
       li {
         /* A simple method to get navigation links to appear in one line. */
-        float: left; /* LTR */
-        /*padding: 0 10px 0 0;*/ /* LTR */
+        float: left; *//* LTR *//*
         list-style-type: none;
         list-style-image: none;
       }
@@ -293,6 +297,7 @@ h1 {
 
   /* The slogan (or tagline) of a website. */
   .header__site-slogan {
+    color: #fff;
     font-family: $merriweather;
     font-size: 1.7em;
     font-style: italic;
@@ -303,16 +308,10 @@ h1 {
     text-transform: none;
   }
 
-  #block-views-materials-block-1 {
-    float: left;
-    margin-right: 3em;
-    width: 45%;
-  }
-
   #block-views-materials-block-2 {
     display: block;
     float:left;
-    width: 50%;
+    width: 35%;
 
     .views-field-title {
       background-color: #fff;
@@ -322,7 +321,7 @@ h1 {
       opacity: 0.7;
       padding: 0.5em;
       position: relative;
-      top: -2.5em;
+      top: 2.4em;
     }
   }
 
@@ -450,7 +449,7 @@ h1 {
   /* The slogan (or tagline) of a website. */
   .header__site-slogan {
     font-family: $merriweather;
-    font-size: 1.1em;
+    font-size: 1em;
     font-style: italic;
     margin: 0;
     margin-bottom: 3.5em;
@@ -458,41 +457,36 @@ h1 {
     text-shadow: 4px 4px 4px #0c0c0c;
   }
 
-  /**
-  * Menu block.
-  */
-  .block-menu-block {
-    left: 22%;
+  #navigation {
+    left: 30%;
+    margin-bottom: 2em;
     position: absolute;
-    text-align: center;
-    bottom: 100%;
+    top: 1.4%;
+    width: 90%;
 
-    ul {
+    .block-menu-block {
 
-      li {
-        background-color: #ab9367;
-        border-left: solid white 3px;
-        border-right: solid white 3px;
-        border-top: solid white 3px;
-        display: inline-block;
-        margin: 0.1em;
-        margin-bottom: 0em;
-        padding: 0.2em;
+      ul {
 
-        a {
-          font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
-          font-size: 0.9em;
-          font-weight: bold;
-          letter-spacing: 0;
-          /*padding-left: 0.3em;*/
-          text-decoration:none;
-          text-transform:uppercase;
-          /*vertical-align: 25%*/;
+        li {
+          border-left: solid white 3px;
+          border-right: solid white 3px;
+          border-top: solid white 3px;
+          padding: 0.2em;
+
+          a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.9em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            vertical-align: 0;
+          }
         }
       }
 
     }
   }
+
 }
 
 /**
@@ -577,9 +571,9 @@ h1 {
   /* The name of the website. */
   .header__site-name {
     font-size: 3.5em;
-    margin: 0;
-    margin-right: 0.5em;
-    margin-top: 0.5em;
+    margin: 1.2em 0.5em 0.5em;
+    /*margin-right: 0.5em;
+    margin-top: 1.2em;*/
   }
 
   /* The link around the name of the website. */
@@ -606,43 +600,51 @@ h1 {
     font-size: 1.7em;
     font-style: italic;
     margin: 0;
-    margin-bottom: 3.5em;
-    margin-right: 3.8em;
+    margin-bottom: 4.8em;
+    margin-right: 3.6em;
     text-shadow: 4px 4px 4px #0c0c0c;
   }
 
-  /**
- * Menu block.
- */
-  .block-menu-block {
-    left: 18%;
+  #navigation {
+    left: 25%;
+    margin-bottom: 2em;
     position: absolute;
-    text-align: center;
-    bottom: 100%;
+    /*top: -1%;*/
+    width: 90%;
 
-    ul {
+    .block-menu-block {
 
-      li {
-        background-color: #ab9367;
-        border-left: solid white 3px;
-        border-right: solid white 3px;
-        border-top: solid white 3px;
-        display: inline-block;
-        margin: 0.1em;
-        margin-bottom: 0em;
-        padding: 0.5em;
+      ul {
 
-        a {
-          font-family: 'Josefin Sans', sans-serif; vertical-align:25%;
-          font-size: 1.5em;
-          font-weight: bold;
-          letter-spacing: 0.1em;
-          text-decoration:none;
-          text-transform:uppercase;
-          vertical-align: 25%;
+        li {
+          border-left: solid white 3px;
+          border-right: solid white 3px;
+          border-top: solid white 3px;
+          padding: 0.5em;
+
+          a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.4em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            vertical-align: 0;
+          }
         }
       }
 
     }
   }
+
+  #block-views-materials-block-1 {
+    float: left;
+    margin-right: 3em;
+    width: 45%;
+  }
+
+  #block-views-materials-block-2 {
+    float: left;
+    margin-right: 3em;
+    width: 45%;
+  }
+
 }
