@@ -827,7 +827,7 @@ input[type="submit"] {
 
 #block-views-gallery-block {
   margin-bottom: 0;
-  margin-left: 3.5em;
+  /*margin-left: 3.5em;*/
   position: relative;
   top: -2em;
 
@@ -866,9 +866,13 @@ input[type="submit"] {
   }
 }
 
-.node-type-material {
+.node-type-material, .node-type-work {
 
   article {
     top: 0;
+  }
+
+  #main {
+    padding-top: 2.5em;
   }
 }

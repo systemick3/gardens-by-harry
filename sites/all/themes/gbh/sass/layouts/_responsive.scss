@@ -34,12 +34,13 @@ $zen-auto-include-item-base: false;
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
 }
 
 #page {
   border:solid 2px #384001;
   background-color:white;
+  margin-bottom: 1em;
   margin-left:auto;
   margin-right:auto;
   /*margin-top:2.2em;*/
@@ -107,11 +108,12 @@ h1 {
 .header__site-slogan {
   color: #222601;
   font-family: $josefin;
-  font-size: 0.8em;
+  font-size: 1.2em;
   font-style: italic;
+  font-weigh: bold;
   margin: 0;
   margin-bottom: 2em;
-  text-shadow: 1px 1px 1px #222601;
+  text-shadow: 1px 1px 1px #fff;
   text-transform: uppercase;
 }
 
@@ -156,6 +158,10 @@ h1 {
     }
 
   }
+}
+
+.section-work #navigation {
+  margin-top: 5em;
 }
 
 #block-views-materials-block-1 {
@@ -320,6 +326,7 @@ h1 {
 
 } // End of @if $zen-reverse-all-floats == true
 
+
 /**
  * Use 3 grid columns for smaller screens.
  */
@@ -447,9 +454,9 @@ h1 {
 
   #navigation {
     left: 30%;
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;*/
     position: absolute;
-    top: 1.4%;
+    top: 2.5%;
     width: 90%;
 
     .block-menu-block {
@@ -460,6 +467,8 @@ h1 {
           border-left: solid white 3px;
           border-right: solid white 3px;
           border-top: solid white 3px;
+          margin: 0.2em;
+          margin-bottom: 0;
           padding: 0.2em;
 
           a {
@@ -475,6 +484,52 @@ h1 {
     }
   }
 
+  .section-gallery {
+
+    #navigation {
+      position: absolute;
+      top: 1.1%;
+    }
+  }
+
+  .section-materials {
+
+    #navigation {
+      position: absolute;
+      top: 0.8%;
+    }
+  }
+
+  .section-contact {
+
+    #navigation {
+      position: absolute;
+      top: 1.7%;
+    }
+  }
+
+  .node-type-material {
+
+    #navigation {
+      position: absolute;
+      top: 1.7%;
+    }
+  }
+
+}
+
+/* Workaround for nav issue */
+@media all and (min-width: 480px) and (max-width: 720px) {
+
+  .section-gallery {
+
+    #navigation {
+      position: absolute;
+      top: 0.6%;
+    }
+  }
+
+
 }
 
 /**
@@ -485,7 +540,7 @@ h1 {
   $zen-column-count: 5;
 
   #main {
-    padding: 2em 3em 0 2em;
+    padding: 2em 3em 0 3.3em;
   }
 
   /**
@@ -595,7 +650,7 @@ h1 {
     left: 25%;
     margin-bottom: 2em;
     position: absolute;
-    /*top: -1%;*/
+    top: -0.6%;
     width: 90%;
 
     .block-menu-block {
@@ -606,6 +661,8 @@ h1 {
           border-left: solid white 3px;
           border-right: solid white 3px;
           border-top: solid white 3px;
+          margin: 0.2em;
+          margin-bottom: 0;
           padding: 0.5em;
 
           a {
