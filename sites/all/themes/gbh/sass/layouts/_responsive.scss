@@ -563,7 +563,7 @@ h1 {
 
   /* The name of the website. */
   .header__site-name {
-    font-size: 3.5em;
+    font-size: 3.9em;
     margin: 1.2em 0.5em 0.5em;
   }
 
@@ -588,7 +588,7 @@ h1 {
   /* The slogan (or tagline) of a website. */
   .header__site-slogan {
     font-family: $merriweather;
-    font-size: 1.7em;
+    font-size: 1.8em;
     font-style: italic;
     margin: 0;
     margin-bottom: 3em;
@@ -609,7 +609,6 @@ h1 {
           border-right: solid white 3px;
           border-top: solid white 3px;
           display: inline-block;
-          margin: 0.2em;
           margin-bottom: 0em;
           padding: 0.5em;
 

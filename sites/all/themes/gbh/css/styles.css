@@ -1261,7 +1261,7 @@ h1 {
   /* The name of the website. */
   /* line 565, ../sass/layouts/_responsive.scss */
   .header__site-name {
-    font-size: 3.5em;
+    font-size: 3.9em;
     margin: 1.2em 0.5em 0.5em;
   }
 
@@ -1286,7 +1286,7 @@ h1 {
   /* line 589, ../sass/layouts/_responsive.scss */
   .header__site-slogan {
     font-family: Merriweather, Arial, "DejaVu Serif", serif;
-    font-size: 1.7em;
+    font-size: 1.8em;
     font-style: italic;
     margin: 0;
     margin-bottom: 3em;
@@ -1305,11 +1305,10 @@ h1 {
     border-right: solid white 3px;
     border-top: solid white 3px;
     display: inline-block;
-    margin: 0.2em;
     margin-bottom: 0em;
     padding: 0.5em;
   }
-  /* line 616, ../sass/layouts/_responsive.scss */
+  /* line 615, ../sass/layouts/_responsive.scss */
   #top-navigation .block-menu-block ul li a {
     font-size: 1.4em;
     font-weight: bold;
@@ -1317,21 +1316,21 @@ h1 {
     padding: 0.4em;
   }
 
-  /* line 627, ../sass/layouts/_responsive.scss */
+  /* line 626, ../sass/layouts/_responsive.scss */
   #block-views-materials-block-1 {
     float: left;
     margin-right: 3em;
     width: 45%;
   }
 
-  /* line 633, ../sass/layouts/_responsive.scss */
+  /* line 632, ../sass/layouts/_responsive.scss */
   #block-views-materials-block-2 {
     float: left;
     margin-right: 3em;
     width: 45%;
   }
 
-  /* line 639, ../sass/layouts/_responsive.scss */
+  /* line 638, ../sass/layouts/_responsive.scss */
   .section-work #navigation {
     margin-top: 0;
   }
