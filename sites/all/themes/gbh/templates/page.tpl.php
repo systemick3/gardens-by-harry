@@ -50,6 +50,12 @@
 
       <?php print render($page['header']); ?>
 
+      <div id="top-navigation">
+
+        <?php print render($page['navigation']); ?>
+
+      </div>
+
     </header>
     
   </hgroup>

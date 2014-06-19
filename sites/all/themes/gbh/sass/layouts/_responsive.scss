@@ -34,7 +34,6 @@ $zen-auto-include-item-base: false;
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  /*max-width: 1200px;*/
 }
 
 #page {
@@ -43,7 +42,6 @@ $zen-auto-include-item-base: false;
   margin-bottom: 1em;
   margin-left:auto;
   margin-right:auto;
-  /*margin-top:2.2em;*/
   width:100%;
 }
 
@@ -66,7 +64,6 @@ $zen-auto-include-item-base: false;
 }
 
 header {
-  /*background-color: #0c0c0c;*/
   background:-moz-linear-gradient(#a1ab67, white); /* For Firefox 3.6 to 15 */
   background:linear-gradient(#a1ab67, white); /* Standard syntax */
   margin-left:auto;
@@ -117,46 +114,47 @@ h1 {
   text-transform: uppercase;
 }
 
+#top-navigation {
+  display: none;
+}
+
 #navigation {
   clear: left;
   padding: 0;
-  width: 100%
-}
-
-/**
-  * Menu block.
-  */
-.block-menu-block {
-  /*clear: both;*/
-  margin-top: -3em;
   width: 100%;
 
-  .menu__item.is-leaf {
-    list-style-type: none;
-    list-style-image: none;
-  }
+  .block-menu-block {
+    margin-top: -3em;
+    text-align:center;
+    width: 100%;
 
-  ul {
-    padding: 0;
-
-    li {
-      background-color: #ab9367;
-      border: solid white 3px;
+    .menu__item.is-leaf {
       list-style-type: none;
       list-style-image: none;
-      text-align: center;
-
-      a {
-        font-family: 'Josefin Sans', sans-serif;
-        vertical-align:25%;
-        font-size: 0.9em;
-        font-weight: bold;
-        letter-spacing: 0;
-        text-decoration:none;
-        text-transform:uppercase;
-      }
     }
 
+    ul {
+      padding: 0;
+
+      li {
+        background-color: #ab9367;
+        border: solid white 3px;
+        list-style-type: none;
+        list-style-image: none;
+        text-align: center;
+
+        a {
+          font-family: 'Josefin Sans', sans-serif;
+          vertical-align:25%;
+          font-size: 0.9em;
+          font-weight: bold;
+          letter-spacing: 0;
+          text-decoration:none;
+          text-transform:uppercase;
+        }
+      }
+
+    }
   }
 }
 
@@ -190,6 +188,7 @@ h1 {
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
+
   body {
     background-image:url("../images/backdrop2.jpg");
     background-repeat: no-repeat;
@@ -225,39 +224,35 @@ h1 {
  * Navigation bar.
  */
   #navigation {
-    /* Sometimes you want to prevent overlapping with main div. */
-    /* overflow: hidden; */
+    display: none;
+  }
 
-    /* Move the navbar up inside #main's padding. */
-    position: absolute;
-    top: 0;
-    height: $nav-height;
-    width: $zen-grid-width;
+  #top-navigation {
+    display: block;
+    float: left; *//**//* LTR *//**//*
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
 
-    .block {
-      margin-bottom: 0;
-    }
+    .block-menu-block {
+      margin: 0;
 
-    .block-menu .block__title,
-    .block-menu-block .block__title {
-      @extend %element-invisible;
-    }
+      ul {
+        margin: 0;
 
-    /* Main menu and secondary menu links and menu block links. */
-    .links,
-    .menu {
-      margin-bottom: 0;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding: 0;
-      text-align: left; /* LTR */
+        li {
+          display:inline-block;
+          background-color: #ab9367;
 
-      li {
-        /* A simple method to get navigation links to appear in one line. */
-        float: left; *//* LTR *//*
-        list-style-type: none;
-        list-style-image: none;
+          a {
+            font-family: 'Josefin Sans', sans-serif;
+            text-decoration: none;
+            text-transform:uppercase;
+          }
+        }
       }
     }
   }
@@ -452,27 +447,29 @@ h1 {
     text-shadow: 4px 4px 4px #0c0c0c;
   }
 
-  #navigation {
-    left: 30%;
-    /*margin-bottom: 2em;*/
-    position: absolute;
-    top: 2.5%;
-    width: 90%;
+  #top-navigation {
+
+    .region-navigation {
+      clear: both;
+    }
 
     .block-menu-block {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
 
       ul {
+        margin-left: auto;
+        margin-right: auto;
 
         li {
           border-left: solid white 3px;
           border-right: solid white 3px;
           border-top: solid white 3px;
-          margin: 0.2em;
-          margin-bottom: 0;
           padding: 0.2em;
 
           a {
-            font-family: 'Josefin Sans', sans-serif;
             font-size: 0.9em;
             font-weight: bold;
             letter-spacing: 0.1em;
@@ -483,57 +480,6 @@ h1 {
 
     }
   }
-
-  .section-work #navigation {
-    margin-top: 0;
-  }
-
-  .section-gallery {
-
-    #navigation {
-      position: absolute;
-      top: 1.1%;
-    }
-  }
-
-  .section-materials {
-
-    #navigation {
-      position: absolute;
-      top: 0.8%;
-    }
-  }
-
-  .section-contact {
-
-    #navigation {
-      position: absolute;
-      top: 1.7%;
-    }
-  }
-
-  .node-type-material {
-
-    #navigation {
-      position: absolute;
-      top: 1.7%;
-    }
-  }
-
-}
-
-/* Workaround for nav issue */
-@media all and (min-width: 480px) and (max-width: 720px) {
-
-  .section-gallery {
-
-    #navigation {
-      position: absolute;
-      top: 0.6%;
-    }
-  }
-
-
 }
 
 /**
@@ -645,40 +591,36 @@ h1 {
     font-size: 1.7em;
     font-style: italic;
     margin: 0;
-    margin-bottom: 4.8em;
+    margin-bottom: 3em;
     margin-right: 3.6em;
     text-shadow: 4px 4px 4px #0c0c0c;
   }
 
-  #navigation {
-    left: 25%;
-    margin-bottom: 2em;
-    position: absolute;
-    top: -0.5%;
-    width: 90%;
+  #top-navigation {
 
     .block-menu-block {
 
       ul {
+        margin: 0;
 
         li {
+          background-color:#ab9367;
           border-left: solid white 3px;
           border-right: solid white 3px;
           border-top: solid white 3px;
+          display: inline-block;
           margin: 0.2em;
-          margin-bottom: 0;
+          margin-bottom: 0em;
           padding: 0.5em;
 
           a {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 1.4em;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-            vertical-align: 0;
+            font-size:1.4em;
+            font-weight:bold;
+            letter-spacing:0.1em;
+            padding: 0.4em;
           }
         }
       }
-
     }
   }
 
