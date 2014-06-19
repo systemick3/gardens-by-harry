@@ -1361,6 +1361,11 @@ h1 {
     margin-right: 3em;
     width: 45%;
   }
+
+  /* line 693, ../sass/layouts/_responsive.scss */
+  .section-work #navigation {
+    margin-top: 0;
+  }
 }
 /* Component (SMACSS module) rules */
 /**
