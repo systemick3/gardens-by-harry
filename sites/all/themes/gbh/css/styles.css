@@ -2238,17 +2238,33 @@ input[type="submit"] {
   border: solid 1px #855B1B;
 }
 
-/* line 863, ../sass/components/_misc.scss */
+/* line 861, ../sass/components/_misc.scss */
+.node-work {
+  margin-bottom: 3em;
+}
+/* line 864, ../sass/components/_misc.scss */
+.node-work img {
+  border: solid 1px #855B1B;
+}
+
+/* line 869, ../sass/components/_misc.scss */
+.field-name-field-work-image .field-item {
+  float: left;
+  margin-bottom: -1em;
+  margin-right: 1em;
+}
+
+/* line 877, ../sass/components/_misc.scss */
 #block-block-3 a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 871, ../sass/components/_misc.scss */
+/* line 885, ../sass/components/_misc.scss */
 .node-type-material article, .node-type-work article {
   top: 0;
 }
-/* line 875, ../sass/components/_misc.scss */
+/* line 889, ../sass/components/_misc.scss */
 .node-type-material #main, .node-type-work #main {
   padding-top: 2.5em;
 }
