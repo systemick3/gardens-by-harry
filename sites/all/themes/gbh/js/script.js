@@ -17,16 +17,18 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+    $('.header__site-slogan').css('visibility', 'hidden');
+
     if ($('#block-views-gallery-block').length) {
 
       $('.views-row img').hover(function(event, context) {
-        $(this).css('opacity', '0.4');
-        $(this).parents('.views-row').children('.views-field-title').css('visibility', 'visible');
+        //$(this).css('opacity', '0.4');
+        //$(this).parents('.views-row').children('.views-field-title').css('visibility', 'visible');
       });
 
       $('.views-row img').mouseout(function(event, context) {
-        $(this).css('opacity', '1');
-        $(this).parents('.views-row').children('.views-field-title').css('visibility', 'hidden');
+        //$(this).css('opacity', '1');
+        //$(this).parents('.views-row').children('.views-field-title').css('visibility', 'hidden');
       });
 
       // Prevent flickering when the cursor moves over the title field
